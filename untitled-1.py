@@ -17,7 +17,7 @@ def index():
 def training(prof):
     a = "Миссия Колонизация Марса"
     b = "И на Марсе будут яблони цвести"
-    c = "Чертёж больницы"
+    c = "Чертёжи"
     return render_template('odd_even.html', title='127.0.0.1:8080/training/{}'.format(prof),
                            u=a, u2=b, u3=c)
 

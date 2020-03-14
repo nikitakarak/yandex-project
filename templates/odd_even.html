@@ -8,6 +8,11 @@
         <h1>{{ u }}!</h1>
         <h4>{{ u2 }}!</h4>
         <h1>{{ u3 }}</h1>
-        <h1><img src="/static/img/MARS-2-2.png" alt="здесь должна была быть картинка, но не нашлась"></h1>
+         {% if prof == доктор %}
+            <div><img src="/static/img/MARS-2-2.jpg" alt="здесь должна была быть картинка, но не нашлась"><div>
+        {% else %}
+            <h1>{{ title }}</h1>
+            <div><img src="/static/img/orig.jpg" alt="здесь должна была быть картинка, но не нашлась"><div>
+        {% endif %}
     </body>
 </html>

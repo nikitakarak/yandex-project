@@ -19,7 +19,7 @@ def training(prof):
     b = "И на Марсе будут яблони цвести"
     c = "Чертёжи"
     return render_template('odd_even.html', title='127.0.0.1:8080/training/{}'.format(prof),
-                           u=a, u2=b, u3=c)
+                           u=a, u2=b, u3=c, prof=prof)
 
 
 if __name__ == '__main__':

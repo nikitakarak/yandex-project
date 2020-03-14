@@ -300,13 +300,11 @@ while running:
                 z = z[:-1]
             else:
                 z += str(event.unicode)
-                print(z)
     screen.fill((255, 255, 255))
     screen.blit(pygame.image.load(map_file), (0, 0))
     pygame.draw.rect(screen, (0, 0, 0), (0, 420, 600, 450), 3)
     fontObj = pygame.font.Font('freesansbold.ttf', 20)
     textSurfaceObj = fontObj.render(z, True, (0, 0, 0), None)
-    textRectObj = textSurfaceObj.get_rect()
     textRectObj = (0, 425)
     screen.blit(textSurfaceObj, textRectObj)
     pygame.display.flip()

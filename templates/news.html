@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Новости</title>
+</head>
+<body>
+        <h1>{{ u }}!</h1>
+        <h2>{{ u2 }}!</h2>
+{% if lis == 'ol' %}
+    {% for item in news['news'] %}
+        <li>{{ loop.index }}. {{item["content"]}}
+        </li>
+    {% endfor %}
+{% else %}
+    {% if lis == 'ul' %}
+        <ul>
+        {% for item in news['news'] %}
+            <li>{{item["content"]}}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <h2>{{ Неверный параметр}}</h2>
+    {% endif %}
+{% endif %}
+</body>
+</html>

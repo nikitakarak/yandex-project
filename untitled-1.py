@@ -31,5 +31,32 @@ def news(list):
     return render_template('news.html', news=news_list, lis=list)
 
 
+@app.route('/promotion_image')
+def bootstrap():
+    return '''<!doctype html>
+                <html lang="en">
+                  <head>
+                    <meta charset="utf-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+                    <link rel="stylesheet" 
+                    href="static/css/style.css" 
+                    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+                    crossorigin="anonymous">
+                    <title>Колонизация</title>
+                  </head>
+                  <body>
+                    <h1 class="text-danger">Жди нас, Марс</h1>
+                    <div>
+                    `   <img src={} alt="здесь должна была быть картинка, но не нашлась">
+                    </div>
+                    <div class="p-1 mb-2 bg-primary text-light"> Человечество вырастает из детства </div>
+                    <div class="p-1 mb-2 bg-success text-dark"> Человечеству мала одна планета </div>
+                    <div class="p-1 mb-2 bg-primary text-light"> Мы сделаем обитаемые безжизненные пока планеты. </div>
+                    <div class="p-2 mb-2 bg-warning text-dark"> И начнём с Марса! </div>
+                    <div class="p-3 mb-2 bg-danger text-light"> Присоединияйся! </div>
+                  </body>
+                </html>'''.format("/static/img/riana2.jpg")
+
+
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1')
